@@ -1,0 +1,35 @@
+a)
+    P(D | S1, S2, S3) = P(D) * P(S1|D) * P(S2|D) * P(S3|D) / (P(S1) * P(S2) * P(S3))
+
+b)
+    P(D | S1, S2, S3) = P(D) * P(S1, S2) * P(S3 | S1, S2) / P(S1, S2, S3)
+
+c)
+    The probablities in part b, specificially the one that defines S3 based on S1 and S2,
+    are different because the Symptoms are not reliant on eachother to some extent.  By
+    this I mean the symptoms are no longer conditionally independent.
+
+    Naive Bayes assumes that the variables are not at all related, this is generally not
+    true in real life.
+
+d)
+    Is A|D,B  d-separable from C|D,B? Give reasons for your answer!
+
+        d is d-seperable
+
+        the path from A to C with repect to D and B is blocked at the verticie D because
+        A->D->E is a head to tail relationship and D is in the set of nodes we are
+        seperating with repect to
+
+        the path from C to A is blocked with respect to B and D because C->E->D is a
+        head to head and E is not in our set of nodes we are seperating with repect to.
+
+
+    Is A,E| d-separable from  C|? Give reasons for your answer! :=”no evidence” 
+
+        A,E -> C will not be d-seperable if there is any head to head relationship
+        between vertexes along the way, since there is no evidence for nodes of us to
+        take the d seperation with repect to.
+
+        A,E and C are indeed d-seperable
+
