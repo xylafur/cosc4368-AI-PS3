@@ -29,10 +29,28 @@
 
     final solution:
         ~P(x, y, F(x, y)) v R(x, y)
-       
+
 2:
     problem:
         VrVs(P(s, s, t) -> Q(s, t))
+
+    taking to mean:
+        VrVs(P(s, s, r) -> Q(s, r))
+
+    remove implications:
+        VrVs(~P(s, s, r) v Q(s, r))
+
+    move ~ inwards:
+        dones
+
+    standardize variables
+        done
+
+    skolemize:
+        done
+
+    remove Universal:
+        ~P(s, s, r) v Q(s, r)
 
     Not sure if this is a typo on their part... skipping for now
 
@@ -42,10 +60,9 @@
 
     remove implications:
         Va]b (~Q(a, a) v R(b, a))
-        
+
     move ~ inwards:
         seem to not need
-
 
     standardize variables:
         doesn't need
@@ -64,33 +81,38 @@
 
     final solution:
         ~Q(a, a) v R(F(a), a)
- 
+
 4:
     problem:
         VxVy(R(x, y) -> R(y, y))
 
     remove implications:
-        
+        VxVy(~R(x, y) v R(y, y))
+
     move ~ inwards:
+        done
 
     standardize variables:
+        done
 
     skolemize:
+        done
 
     drop universal quantifier:
+        ~R(x, y) v R(y, y)
 
     distribute ^ over v
-
-    binary resolution
+        done
 
     final solution:
- 
+        ~R(x, y) v R(y, y)
+
 5:
     problem:
         P(4, 4, 4)
 
     remove implications:
-        
+
     move ~ inwards:
 
     standardize variables:
@@ -104,10 +126,14 @@
     binary resolution
 
     final solution:
- 
+
 6:
     problem:
-        ~Q(4, 5) |= (X)R(4, 4)
+        ~Q(4, 5)
+
+
+
+|= (X)R(4, 4)
 
     remove implications:
         
