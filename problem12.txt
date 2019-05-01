@@ -1,0 +1,127 @@
+1:
+    problem:
+        VxVy]z (P(x, y, z) -> R(x, y))
+
+    remove implications
+        VxVy]z (~P(x, y, z) v R(x, y))
+
+    move ~ inwards
+        seems to not need this step
+
+    standardize variables
+        doesn't need this step
+
+    skolemize:
+        VxVy (~P(x, y, F(x, y)) v R(x, y))
+
+        - not really sure if should be replacing z with F(x, y) or F(z)
+            - see page 346
+
+    drop universal quantifiers
+        ~P(x, y, F(x, y)) v R(x, y)
+
+    distribute ^ over v
+        don't need this step since we only have the two halves
+
+
+    binary resolution
+        there are only the two clauses, nothing to unify
+
+    final solution:
+        ~P(x, y, F(x, y)) v R(x, y)
+       
+2:
+    problem:
+        VrVs(P(s, s, t) -> Q(s, t))
+
+    Not sure if this is a typo on their part... skipping for now
+
+3:
+    problem:
+        Va]b (Q(a, a) -> R(b, a))
+
+    remove implications:
+        Va]b (~Q(a, a) v R(b, a))
+        
+    move ~ inwards:
+        seem to not need
+
+
+    standardize variables:
+        doesn't need
+
+    skolemize:
+        Va (~Q(a, a) v R(F(a), a))
+
+    drop universal quantifier:
+        ~Q(a, a) v R(F(a), a)
+
+    distribute ^ over v
+        don't need this step since we only have the two halves
+
+    binary resolution
+        there are only the two clauses, nothing to unify
+
+    final solution:
+        ~Q(a, a) v R(F(a), a)
+ 
+4:
+    problem:
+        VxVy(R(x, y) -> R(y, y))
+
+    remove implications:
+        
+    move ~ inwards:
+
+    standardize variables:
+
+    skolemize:
+
+    drop universal quantifier:
+
+    distribute ^ over v
+
+    binary resolution
+
+    final solution:
+ 
+5:
+    problem:
+        P(4, 4, 4)
+
+    remove implications:
+        
+    move ~ inwards:
+
+    standardize variables:
+
+    skolemize:
+
+    drop universal quantifier:
+
+    distribute ^ over v
+
+    binary resolution
+
+    final solution:
+ 
+6:
+    problem:
+        ~Q(4, 5) |= (X)R(4, 4)
+
+    remove implications:
+        
+    move ~ inwards:
+
+    standardize variables:
+
+    skolemize:
+
+    drop universal quantifier:
+
+    distribute ^ over v
+
+    binary resolution
+
+    final solution:
+ 
