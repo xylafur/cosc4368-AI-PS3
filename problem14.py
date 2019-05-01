@@ -39,7 +39,7 @@ O6 = lambda w46, h4, w56, h5, w36, x3: g(w46 * h4 + w56 * h5 + w36 * x3)
 #new_weight_inner = lambda diriv, z, weight, error: diriv(z) * weight * error
 
 new_weight = lambda old_weight, learn_rate, outer_node, inner_node, error:  \
-    old_weight - learn_rate * error * (outer_node * (1 - outer_node)) * inner_node
+    old_weight + learn_rate * error * (outer_node * (1 - outer_node)) * inner_node
 
 ##############################################################################
 #   Formatting / Output functions
@@ -65,7 +65,7 @@ def print_new_weight(new_val, name, old_val, lr, node_val, downstream_node, e,
 ##############################################################################
 rounds = (
     ((1, 1, 1), 1),
-    ((0, 0, 1), 0)
+    ((0, 0, 1), 0),
 )
 
 def do_round(r, weights, verbose=True):
@@ -79,6 +79,10 @@ def do_round(r, weights, verbose=True):
     o6 = O6(w46, h4, w56, h5, w36, x3)
 
     e = res - o6
+
+
+    print("O6: {}".format(o6))
+    print("Error: {}".format(e))
 
 
     new_w46 = new_weight(w46, LEARNING_RATE, o6, h4, e)
